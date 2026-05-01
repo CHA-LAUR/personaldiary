@@ -1,13 +1,14 @@
-try: 
-    with open("Diary System.txt", "x") as file:
-        pass
-    print('Diary created')
+try:
+    # Create file if it doesn't exist
+    with open("Diary System.txt", "x"):
+        print("Diary created")
 
-    with open("Diary System.txt", "w") as file:
-        file.write(input("What do you want to write??"))
-        def add_entry():
+except FileExistsError:
+    print("File already exists")
+
+def add_entry():
     try:
-        with open("diary.txt", "a") as file:
+        with open("Diary System.txt", "a") as file:
             while True:
                 entry = input("Enter diary entry: ")
                 file.write(entry + "\n")
@@ -20,11 +21,5 @@ try:
     except Exception as e:
         print("Error:", e)
 
+# Run the function
 add_entry()
-Compose
-Write to Charys Betasolo Mondelo
-
-        
-except FileExistsError:
-    print ("File already exists")
-    
