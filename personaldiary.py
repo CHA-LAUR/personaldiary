@@ -4,12 +4,7 @@ try:
     print('Diary created')
 
     with open("Diary System.txt", "w") as file:
-        file.write("My Diary")
-
-    print("File already exists")
-
-    entry = input("What do you want to write? ")
-
-    with open("Diary System", "a") as file: 
+        file.write(input("What do you want to write?"))
         
-except FileExistsError: pangit charys
+except FileExistsError:
+    print ("File already exists")
